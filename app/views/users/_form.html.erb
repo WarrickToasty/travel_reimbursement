@@ -12,16 +12,43 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <%= f.text_field :password %>
   </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
+
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<!--
+<form>
+
+  <div class="form-group">
+    <label for="">Email</label>
+    <label class="sr-only" for="form-email">Enter Your Email</label>
+    <input type="text" name="form-email" placeholder="user@go.olemiss.edu" class="form-email form-control" id="form-email">
+  </div>
+
+  <div class="form-group">
+    <label for="">Password</label>
+    <input type="password" class = "form-control" id="" placeholder="Password">
+  </div>
+
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox">Remember Me
+    </label>
+  </div>
+  <button type="submit" class="btn-login btn btn-primary">Submit</button>
+
+</form>
+-->
