@@ -1,0 +1,56 @@
+
+
+<%= form_for(user) do |f| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="form-group">
+    <label for="">Email</label>
+    <%= f.label :email, "Email:", class: "sr-only", for: "form-email" %>
+    <%= f.text_field :email, class: "form-email form-control",placeholder: "user@go.olemiss.edu", id: "form-email" %>
+  </div>
+
+  <div class="form-group">
+    <label for="">Password</label>
+    <%= f.text_field :password, class: "form-control", id: "", placeholder: "Password" %>
+  </div>
+
+
+
+    <%= f.submit "Submit", class: "btn-login btn btn-primary"%>
+    <% end %>
+
+<!--
+<form>
+
+  <div class="form-group">
+    <label for="">Email</label>
+    <label class="sr-only" for="form-email">Enter Your Email</label>
+    <input type="text" name="form-email" placeholder="user@go.olemiss.edu" class="form-email form-control" id="form-email">
+  </div>
+
+  <div class="form-group">
+    <label for="">Password</label>
+    <input type="password" class = "form-control" id="" placeholder="Password">
+  </div>
+
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox">Remember Me
+    </label>
+  </div>
+  <button type="submit" class="btn-login btn btn-primary">Submit</button>
+
+</form>
+-->
