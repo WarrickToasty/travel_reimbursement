@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  multi_page: MyString
+  sap_number: MyString
+  contact_person: MyString
+  purpose: MyString
+  place: MyString
+  meeting_time: 2017-04-03 19:29:00
+  meeting_date: 2017-04-03
+  begin_time: 2017-04-03 19:29:00
+  end_time: 2017-04-03 19:29:00
+  begin_date: 2017-04-03
+  end_date: 2017-04-03
+  accompanied_by: MyString
+  travel_estimate: 1.5
+  food_estimate: 1.5
+  lodging_estimate: 1.5
+  fee_estimate: 1.5
+  conference_fee: 1.5
+
+two:
+  multi_page: MyString
+  sap_number: MyString
+  contact_person: MyString
+  purpose: MyString
+  place: MyString
+  meeting_time: 2017-04-03 19:29:00
+  meeting_date: 2017-04-03
+  begin_time: 2017-04-03 19:29:00
+  end_time: 2017-04-03 19:29:00
+  begin_date: 2017-04-03
+  end_date: 2017-04-03
+  accompanied_by: MyString
+  travel_estimate: 1.5
+  food_estimate: 1.5
+  lodging_estimate: 1.5
+  fee_estimate: 1.5
+  conference_fee: 1.5

@@ -1,0 +1,132 @@
+<%= form_for(day_table) do |f| %>
+  <% if day_table.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(day_table.errors.count, "error") %> prohibited this day_table from being saved:</h2>
+
+      <ul>
+      <% day_table.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :trip_number %>
+    <%= f.text_field :trip_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :string %>
+    <%= f.text_field :string %>
+  </div>
+
+  <div class="field">
+    <%= f.label :breakfast %>
+    <%= f.text_field :breakfast %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lunch %>
+    <%= f.text_field :lunch %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dinner %>
+    <%= f.text_field :dinner %>
+  </div>
+
+  <div class="field">
+    <%= f.label :breakfast_tip %>
+    <%= f.text_field :breakfast_tip %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lunch_tip %>
+    <%= f.text_field :lunch_tip %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dinner_tip %>
+    <%= f.text_field :dinner_tip %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lodging %>
+    <%= f.text_field :lodging %>
+  </div>
+
+  <div class="field">
+    <%= f.label :business_calls %>
+    <%= f.text_field :business_calls %>
+  </div>
+
+  <div class="field">
+    <%= f.label :transport_start %>
+    <%= f.text_field :transport_start %>
+  </div>
+
+  <div class="field">
+    <%= f.label :transport_end %>
+    <%= f.text_field :transport_end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mileage %>
+    <%= f.text_field :mileage %>
+  </div>
+
+  <div class="field">
+    <%= f.label :personal_car %>
+    <%= f.text_field :personal_car %>
+  </div>
+
+  <div class="field">
+    <%= f.label :float %>
+    <%= f.text_field :float %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rental_car %>
+    <%= f.text_field :rental_car %>
+  </div>
+
+  <div class="field">
+    <%= f.label :float %>
+    <%= f.text_field :float %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bus_train %>
+    <%= f.text_field :bus_train %>
+  </div>
+
+  <div class="field">
+    <%= f.label :float %>
+    <%= f.text_field :float %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tax %>
+    <%= f.text_field :tax %>
+  </div>
+
+  <div class="field">
+    <%= f.label :airfare %>
+    <%= f.text_field :airfare %>
+  </div>
+
+  <div class="field">
+    <%= f.label :parking %>
+    <%= f.text_field :parking %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gasoline %>
+    <%= f.text_field :gasoline %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

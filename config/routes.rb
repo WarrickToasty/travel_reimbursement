@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :trips
+  resources :day_tables
+  resources :employees
+  resources :users
   resources :employees
   resources :users
 

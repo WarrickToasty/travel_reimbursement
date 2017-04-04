@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Day Tables</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Trip number</th>
+      <th>String</th>
+      <th>Breakfast</th>
+      <th>Lunch</th>
+      <th>Dinner</th>
+      <th>Breakfast tip</th>
+      <th>Lunch tip</th>
+      <th>Dinner tip</th>
+      <th>Lodging</th>
+      <th>Business calls</th>
+      <th>Transport start</th>
+      <th>Transport end</th>
+      <th>Mileage</th>
+      <th>Personal car</th>
+      <th>Float</th>
+      <th>Rental car</th>
+      <th>Float</th>
+      <th>Bus train</th>
+      <th>Float</th>
+      <th>Tax</th>
+      <th>Airfare</th>
+      <th>Parking</th>
+      <th>Gasoline</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @day_tables.each do |day_table| %>
+      <tr>
+        <td><%= day_table.trip_number %></td>
+        <td><%= day_table.string %></td>
+        <td><%= day_table.breakfast %></td>
+        <td><%= day_table.lunch %></td>
+        <td><%= day_table.dinner %></td>
+        <td><%= day_table.breakfast_tip %></td>
+        <td><%= day_table.lunch_tip %></td>
+        <td><%= day_table.dinner_tip %></td>
+        <td><%= day_table.lodging %></td>
+        <td><%= day_table.business_calls %></td>
+        <td><%= day_table.transport_start %></td>
+        <td><%= day_table.transport_end %></td>
+        <td><%= day_table.mileage %></td>
+        <td><%= day_table.personal_car %></td>
+        <td><%= day_table.float %></td>
+        <td><%= day_table.rental_car %></td>
+        <td><%= day_table.float %></td>
+        <td><%= day_table.bus_train %></td>
+        <td><%= day_table.float %></td>
+        <td><%= day_table.tax %></td>
+        <td><%= day_table.airfare %></td>
+        <td><%= day_table.parking %></td>
+        <td><%= day_table.gasoline %></td>
+        <td><%= link_to 'Show', day_table %></td>
+        <td><%= link_to 'Edit', edit_day_table_path(day_table) %></td>
+        <td><%= link_to 'Destroy', day_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Day Table', new_day_table_path %>

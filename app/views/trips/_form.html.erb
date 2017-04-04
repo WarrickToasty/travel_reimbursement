@@ -1,0 +1,102 @@
+<%= form_for(trip) do |f| %>
+  <% if trip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
+
+      <ul>
+      <% trip.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :multi_page %>
+    <%= f.text_field :multi_page %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sap_number %>
+    <%= f.text_field :sap_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contact_person %>
+    <%= f.text_field :contact_person %>
+  </div>
+
+  <div class="field">
+    <%= f.label :purpose %>
+    <%= f.text_field :purpose %>
+  </div>
+
+  <div class="field">
+    <%= f.label :place %>
+    <%= f.text_field :place %>
+  </div>
+
+  <div class="field">
+    <%= f.label :meeting_time %>
+    <%= f.time_select :meeting_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :meeting_date %>
+    <%= f.date_select :meeting_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :begin_time %>
+    <%= f.time_select :begin_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_time %>
+    <%= f.time_select :end_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :begin_date %>
+    <%= f.date_select :begin_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_date %>
+    <%= f.date_select :end_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :accompanied_by %>
+    <%= f.text_field :accompanied_by %>
+  </div>
+
+  <div class="field">
+    <%= f.label :travel_estimate %>
+    <%= f.text_field :travel_estimate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :food_estimate %>
+    <%= f.text_field :food_estimate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lodging_estimate %>
+    <%= f.text_field :lodging_estimate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fee_estimate %>
+    <%= f.text_field :fee_estimate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :conference_fee %>
+    <%= f.text_field :conference_fee %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

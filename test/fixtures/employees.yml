@@ -2,20 +2,16 @@
 
 one:
   email: MyString
-  user_id: 1
-  sap_number: 1
   department: MyString
   first_name: MyString
   last_name: MyString
-  phone_number: 1
-  user: one
+  phone_number: MyString
+  username: MyString
 
 two:
   email: MyString
-  user_id: 1
-  sap_number: 1
   department: MyString
   first_name: MyString
   last_name: MyString
-  phone_number: 1
-  user: two
+  phone_number: MyString
+  username: MyString

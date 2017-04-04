@@ -1,0 +1,2 @@
+class DayTable < ApplicationRecord
+end

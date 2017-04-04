@@ -6,13 +6,11 @@
   <thead>
     <tr>
       <th>Email</th>
-      <th>User</th>
-      <th>Sap number</th>
       <th>Department</th>
       <th>First name</th>
       <th>Last name</th>
       <th>Phone number</th>
-      <th>User</th>
+      <th>Username</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,13 +19,11 @@
     <% @employees.each do |employee| %>
       <tr>
         <td><%= employee.email %></td>
-        <td><%= employee.user_id %></td>
-        <td><%= employee.sap_number %></td>
         <td><%= employee.department %></td>
         <td><%= employee.first_name %></td>
         <td><%= employee.last_name %></td>
         <td><%= employee.phone_number %></td>
-        <td><%= employee.user %></td>
+        <td><%= employee.username %></td>
         <td><%= link_to 'Show', employee %></td>
         <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
         <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -39,4 +35,3 @@
 <br>
 
 <%= link_to 'New Employee', new_employee_path %>
-<%= link_to 'User', users_path %>

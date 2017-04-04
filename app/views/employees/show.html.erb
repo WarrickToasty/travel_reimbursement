@@ -6,16 +6,6 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @employee.user_id %>
-</p>
-
-<p>
-  <strong>Sap number:</strong>
-  <%= @employee.sap_number %>
-</p>
-
-<p>
   <strong>Department:</strong>
   <%= @employee.department %>
 </p>
@@ -36,10 +26,9 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @employee.user %>
+  <strong>Username:</strong>
+  <%= @employee.username %>
 </p>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
 <%= link_to 'Back', employees_path %>
-<%= link_to 'User', users_path %>
