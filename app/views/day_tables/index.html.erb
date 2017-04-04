@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>D8</th>
       <th>Trip number</th>
       <th>String</th>
       <th>Breakfast</th>
@@ -28,6 +29,7 @@
       <th>Airfare</th>
       <th>Parking</th>
       <th>Gasoline</th>
+      <th>Trip</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -35,6 +37,7 @@
   <tbody>
     <% @day_tables.each do |day_table| %>
       <tr>
+        <td><%= day_table.d8 %></td>
         <td><%= day_table.trip_number %></td>
         <td><%= day_table.string %></td>
         <td><%= day_table.breakfast %></td>
@@ -58,6 +61,7 @@
         <td><%= day_table.airfare %></td>
         <td><%= day_table.parking %></td>
         <td><%= day_table.gasoline %></td>
+        <td><%= day_table.trip %></td>
         <td><%= link_to 'Show', day_table %></td>
         <td><%= link_to 'Edit', edit_day_table_path(day_table) %></td>
         <td><%= link_to 'Destroy', day_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>

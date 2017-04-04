@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Trip number</th>
       <th>Multi page</th>
       <th>Sap number</th>
       <th>Contact person</th>
@@ -22,6 +23,9 @@
       <th>Lodging estimate</th>
       <th>Fee estimate</th>
       <th>Conference fee</th>
+      <th>Banquet fee</th>
+      <th>Dues</th>
+      <th>Employee</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,6 +33,7 @@
   <tbody>
     <% @trips.each do |trip| %>
       <tr>
+        <td><%= trip.trip_number %></td>
         <td><%= trip.multi_page %></td>
         <td><%= trip.sap_number %></td>
         <td><%= trip.contact_person %></td>
@@ -46,6 +51,9 @@
         <td><%= trip.lodging_estimate %></td>
         <td><%= trip.fee_estimate %></td>
         <td><%= trip.conference_fee %></td>
+        <td><%= trip.banquet_fee %></td>
+        <td><%= trip.dues %></td>
+        <td><%= trip.employee %></td>
         <td><%= link_to 'Show', trip %></td>
         <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
         <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>

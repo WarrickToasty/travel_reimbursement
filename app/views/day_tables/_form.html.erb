@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :d8 %>
+    <%= f.date_select :d8 %>
+  </div>
+
+  <div class="field">
     <%= f.label :trip_number %>
     <%= f.text_field :trip_number %>
   </div>
@@ -124,6 +129,11 @@
   <div class="field">
     <%= f.label :gasoline %>
     <%= f.text_field :gasoline %>
+  </div>
+
+  <div class="field">
+    <%= f.label :trip_id %>
+    <%= f.text_field :trip_id %>
   </div>
 
   <div class="actions">

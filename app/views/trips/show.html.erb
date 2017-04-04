@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Trip number:</strong>
+  <%= @trip.trip_number %>
+</p>
+
+<p>
   <strong>Multi page:</strong>
   <%= @trip.multi_page %>
 </p>
@@ -83,6 +88,21 @@
 <p>
   <strong>Conference fee:</strong>
   <%= @trip.conference_fee %>
+</p>
+
+<p>
+  <strong>Banquet fee:</strong>
+  <%= @trip.banquet_fee %>
+</p>
+
+<p>
+  <strong>Dues:</strong>
+  <%= @trip.dues %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @trip.employee %>
 </p>
 
 <%= link_to 'Edit', edit_trip_path(@trip) %> |

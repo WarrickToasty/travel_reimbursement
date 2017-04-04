@@ -1,6 +1,7 @@
 class CreateTrips < ActiveRecord::Migration[5.0]
   def change
     create_table :trips do |t|
+      t.string :trip_number
       t.string :multi_page
       t.string :sap_number
       t.string :contact_person
@@ -18,6 +19,9 @@ class CreateTrips < ActiveRecord::Migration[5.0]
       t.float :lodging_estimate
       t.float :fee_estimate
       t.float :conference_fee
+      t.float :banquet_fee
+      t.float :dues
+      t.references :employee, foreign_key: true
 
       t.timestamps
     end

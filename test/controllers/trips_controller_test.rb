@@ -17,7 +17,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create trip" do
     assert_difference('Trip.count') do
-      post trips_url, params: { trip: { accompanied_by: @trip.accompanied_by, begin_date: @trip.begin_date, begin_time: @trip.begin_time, conference_fee: @trip.conference_fee, contact_person: @trip.contact_person, end_date: @trip.end_date, end_time: @trip.end_time, fee_estimate: @trip.fee_estimate, food_estimate: @trip.food_estimate, lodging_estimate: @trip.lodging_estimate, meeting_date: @trip.meeting_date, meeting_time: @trip.meeting_time, multi_page: @trip.multi_page, place: @trip.place, purpose: @trip.purpose, sap_number: @trip.sap_number, travel_estimate: @trip.travel_estimate } }
+      post trips_url, params: { trip: { accompanied_by: @trip.accompanied_by, banquet_fee: @trip.banquet_fee, begin_date: @trip.begin_date, begin_time: @trip.begin_time, conference_fee: @trip.conference_fee, contact_person: @trip.contact_person, dues: @trip.dues, employee_id: @trip.employee_id, end_date: @trip.end_date, end_time: @trip.end_time, fee_estimate: @trip.fee_estimate, food_estimate: @trip.food_estimate, lodging_estimate: @trip.lodging_estimate, meeting_date: @trip.meeting_date, meeting_time: @trip.meeting_time, multi_page: @trip.multi_page, place: @trip.place, purpose: @trip.purpose, sap_number: @trip.sap_number, travel_estimate: @trip.travel_estimate, trip_number: @trip.trip_number } }
     end
 
     assert_redirected_to trip_url(Trip.last)
@@ -34,7 +34,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update trip" do
-    patch trip_url(@trip), params: { trip: { accompanied_by: @trip.accompanied_by, begin_date: @trip.begin_date, begin_time: @trip.begin_time, conference_fee: @trip.conference_fee, contact_person: @trip.contact_person, end_date: @trip.end_date, end_time: @trip.end_time, fee_estimate: @trip.fee_estimate, food_estimate: @trip.food_estimate, lodging_estimate: @trip.lodging_estimate, meeting_date: @trip.meeting_date, meeting_time: @trip.meeting_time, multi_page: @trip.multi_page, place: @trip.place, purpose: @trip.purpose, sap_number: @trip.sap_number, travel_estimate: @trip.travel_estimate } }
+    patch trip_url(@trip), params: { trip: { accompanied_by: @trip.accompanied_by, banquet_fee: @trip.banquet_fee, begin_date: @trip.begin_date, begin_time: @trip.begin_time, conference_fee: @trip.conference_fee, contact_person: @trip.contact_person, dues: @trip.dues, employee_id: @trip.employee_id, end_date: @trip.end_date, end_time: @trip.end_time, fee_estimate: @trip.fee_estimate, food_estimate: @trip.food_estimate, lodging_estimate: @trip.lodging_estimate, meeting_date: @trip.meeting_date, meeting_time: @trip.meeting_time, multi_page: @trip.multi_page, place: @trip.place, purpose: @trip.purpose, sap_number: @trip.sap_number, travel_estimate: @trip.travel_estimate, trip_number: @trip.trip_number } }
     assert_redirected_to trip_url(@trip)
   end
 

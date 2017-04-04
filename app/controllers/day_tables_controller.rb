@@ -69,6 +69,6 @@ class DayTablesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def day_table_params
-      params.require(:day_table).permit(:trip_number, :string, :breakfast, :lunch, :dinner, :breakfast_tip, :lunch_tip, :dinner_tip, :lodging, :business_calls, :transport_start, :transport_end, :mileage, :personal_car, :float, :rental_car, :float, :bus_train, :float, :tax, :airfare, :parking, :gasoline)
+      params.require(:day_table).permit(:d8, :trip_number, :string, :breakfast, :lunch, :dinner, :breakfast_tip, :lunch_tip, :dinner_tip, :lodging, :business_calls, :transport_start, :transport_end, :mileage, :personal_car, :float, :rental_car, :float, :bus_train, :float, :tax, :airfare, :parking, :gasoline, :trip_id)
     end
 end

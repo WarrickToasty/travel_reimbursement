@@ -1,6 +1,7 @@
 class CreateDayTables < ActiveRecord::Migration[5.0]
   def change
     create_table :day_tables do |t|
+      t.date :d8
       t.string :trip_number
       t.string :string
       t.float :breakfast
@@ -24,6 +25,7 @@ class CreateDayTables < ActiveRecord::Migration[5.0]
       t.float :airfare
       t.float :parking
       t.float :gasoline
+      t.references :trip, foreign_key: true
 
       t.timestamps
     end

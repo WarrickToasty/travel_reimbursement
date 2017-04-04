@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>D8:</strong>
+  <%= @day_table.d8 %>
+</p>
+
+<p>
   <strong>Trip number:</strong>
   <%= @day_table.trip_number %>
 </p>
@@ -113,6 +118,11 @@
 <p>
   <strong>Gasoline:</strong>
   <%= @day_table.gasoline %>
+</p>
+
+<p>
+  <strong>Trip:</strong>
+  <%= @day_table.trip %>
 </p>
 
 <%= link_to 'Edit', edit_day_table_path(@day_table) %> |

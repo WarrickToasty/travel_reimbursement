@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Sap number:</strong>
+  <%= @employee.sap_number %>
+</p>
+
+<p>
   <strong>Email:</strong>
   <%= @employee.email %>
 </p>
@@ -28,6 +33,11 @@
 <p>
   <strong>Username:</strong>
   <%= @employee.username %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @employee.user %>
 </p>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
