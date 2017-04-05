@@ -11,47 +11,44 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :sap_number %>
-    <%= f.text_field :sap_number %>
+  <div class="form-group">
+    <label for="sap_number">Sap Number</label>
+    <%= f.text_field :sap_number, class: "form-control", id: "sap_number" %>
   </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <%= f.text_field :email, class: "form-control", id: "email" %>
   </div>
 
-  <div class="field">
-    <%= f.label :department %>
-    <%= f.text_field :department %>
+  <div class="form-group">
+    <label for="department">Department</label>
+    <%= f.text_field :department, class: "form-control", id: "department" %>
   </div>
 
-  <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+  <div class="form-group">
+    <label for="first_name">First Name</label>
+    <%= f.text_field :first_name, class: "form-control", id: "first_name" %>
   </div>
 
-  <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
+  <div class="form-group">
+    <label for="last_name">Last Name</label>
+    <%= f.text_field :last_name, class: "form-control", id: "last_name" %>
   </div>
 
-  <div class="field">
-    <%= f.label :phone_number %>
-    <%= f.text_field :phone_number %>
+  <div class="form-group">
+    <label for="phone_number">Phone Number</label>
+    <%= f.text_field :phone_number, class: "form-control", id: "phone_number" %>
   </div>
 
-  <div class="field">
-    <%= f.label :username %>
+  <div class=sr-only form-group">
     <%= f.text_field :username %>
   </div>
 
-  <div class="field">
-    <%= f.label :user_id %>
+  <div class="sr-only form-group">
+    <label for="sap_number">Sap Number</label>
     <%= f.text_field :user_id %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit class: "btn-login btn btn-primary" %>
 <% end %>
