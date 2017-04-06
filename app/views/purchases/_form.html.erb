@@ -1,0 +1,53 @@
+
+
+<%= form_for(purchase) do |f| %>
+  <% if purchase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(purchase.errors.count, "error") %> prohibited this purchase from being saved:</h2>
+
+      <ul>
+      <% purchase.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <div class="form-group"> <!-- Date input -->
+
+      <label class="control-label" for="date">Date</label>
+      <input class="form-control" id="date" name="purchase[date]" placeholder="MM/DD/YYY" type="date"/>
+
+      <label>Category</label>
+      <select id="ddl" class ="form-control" name="purchase[category]" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
+        <option value=""></option>
+        <option value="Food">Food</option>
+        <option value="Lodging">Lodging</option>
+        <option value="Transportation">Transportation</option>
+        <option value="Other">Other</option>
+      </select>
+      <div id ="dd2">
+        <label>Type</label>
+        <select id="ddl2" class="form-control" name="purchase[tipe]" onchange="otherTest()">
+        </select>
+      </div>
+      <div id="amount">
+        <label>Amount</label>
+        <input step=".01" class="form-control" type="number" name="purchase[amount]"><br>
+      </div>
+      <div id="desc">
+        <label>Description</label>
+        <input class="form-control" id="descValue" type="text" name="purchase[description]"><br>
+      </div>
+
+      <div class="field">
+        <%= f.label :trip_id %>
+        <%= f.text_field :trip_id %>
+      </div>
+    </div>
+  <div class="actions">
+    <%= f.submit class: "btn-login btn btn-primary" %>
+  </div>
+
+<% end %>

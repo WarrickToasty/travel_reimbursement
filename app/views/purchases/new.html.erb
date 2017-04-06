@@ -1,13 +1,14 @@
-
-<body>
 <nav class="navbar navbar-inverse" >
   <div class="container-fluid">
 
     <!-- Logo -->
     <div class="navbar-header">
-      <a class="navbar-brand">
+      <a class="navbar-brand" href="http://communications.olemiss.edu/creative-toolbox/">
         OleMiss
       </a>
+
+
+
 
 
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
@@ -23,28 +24,21 @@
     <!-- Menu -->
     <div class="collapse navbar-collapse" id="mainNavBar">
       <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Current Trip</a></li>
-        <li><a href="#">Past Trips</a></li>
-        <li><a href="#">Contact/Help</a></li>
+        <li class="active"><a href="#">Login</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Contact</a></li>
 
       </ul>
-      <a class="navbar-brand navbar-right">
-        OleMiss
-      </a>
     </div>
 
   </div>
 </nav>
-
-<h1>New Purchase</h1>
-
-
 <div class="row">
   <div class="wrap-login col-md-4 col-md-offset-4">
-    <%= render 'form', day_table: @day_table %>
+    <h2 class="member-logo">New Purchase</h2>
+
+    <%= render 'form', purchase: @purchase %>
+
+    <%= link_to 'Back', purchases_path %>
   </div>
 </div>
-<%= link_to 'Back', day_tables_path %>
-</body>

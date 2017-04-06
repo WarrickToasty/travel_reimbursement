@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :purchases
   get  '/help',    to: 'static_pages#help'
   get  '/about',   to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
-  resources :day_tables
+  resources :purchases
   resources :trips
   resources :employees
   resources :users

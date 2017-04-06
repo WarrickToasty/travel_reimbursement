@@ -1,2 +1,0 @@
-module DayTablesHelper
-end
