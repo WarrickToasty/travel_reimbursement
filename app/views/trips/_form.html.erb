@@ -13,7 +13,7 @@
 
   <div class="form-group">
     <label for="email">Trip Number</label>
-    <%= f.text_field :trip_number %>
+    <%= f.text_field :trip_number, class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -23,98 +23,102 @@
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.text_field :sap_number %>
+    <label for="email">Sap number</label>
+    <%= f.text_field :sap_number, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.text_field :contact_person %>
+    <label for="email">Conact Person</label>
+    <%= f.text_field :contact_person, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.text_field :purpose %>
+    <label for="email">Purpose</label>
+    <%= f.text_field :purpose, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.text_field :place %>
+    <label for="email">Place</label>
+    <%= f.text_field :place, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.time_select :meeting_time %>
+    <label for="begin_date">Begin Date</label>
+    <%= f.date_select :begin_date, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
+    <label for="email">Meeting Date</label>
     <%= f.date_select :meeting_date %>
-  </div>
+
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.time_select :begin_time %>
-  </div>
-
-  <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.time_select :end_time %>
-  </div>
-
-  <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.date_select :begin_date %>
-  </div>
-
-  <div class="form-group">
-    <label for="email">Email</label>
+    <label for="end_date">End Date</label>
     <%= f.date_select :end_date %>
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.text_field :accompanied_by %>
+    <label for="meeting_time">Meeting Time</label>
+    <%= f.time_select :meeting_time, {ampm: true} %>
+  </div>
+
+
+
+  <div class="form-group">
+    <label for="begin_time">Begin Time</label>
+    <%= f.time_select :begin_time, {ampm: true} %>
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.text_field :travel_estimate %>
+    <label for="end_time">End Time</label>
+    <%= f.time_select :end_time, {ampm: true} %>
+  </div>
+
+
+
+  <div class="form-group">
+    <label for="accompanied_by">Accompanied By</label>
+    <%= f.text_field :accompanied_by, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.text_field :food_estimate %>
+    <label for="travel_estimate">Travel Cost Estimate</label>
+    <%= f.text_field :travel_estimate, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.text_field :lodging_estimate %>
+    <label for="food_estimate">Food Cost Estimate</label>
+    <%= f.text_field :food_estimate, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.text_field :fee_estimate %>
+    <label for="lodging_estimate">Lodging Cost Estimate</label>
+    <%= f.text_field :lodging_estimate, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.text_field :conference_fee %>
+    <label for="fee_estimate">Fee Cost Estimate</label>
+    <%= f.text_field :fee_estimate, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.text_field :banquet_fee %>
+    <label for="conference_fee">Conference Fee</label>
+    <%= f.text_field :conference_fee, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    <%= f.text_field :dues %>
+    <label for="banquet_fee">Banquet Fee</label>
+    <%= f.text_field :banquet_fee, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <label for="email">Employee ID</label>
-    <%= f.text_field :employee_id %>
+    <label for="dues">Dues</label>
+    <%= f.text_field :dues, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label for="employee_id">Employee ID</label>
+    <%= f.text_field :employee_id, class: "form-control" %>
   </div>
 
   <div class="actions">
