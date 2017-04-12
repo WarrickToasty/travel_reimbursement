@@ -3,8 +3,8 @@
 
     <!-- Logo -->
     <div class="navbar-header">
-      <a class="navbar-brand">
-        OleMiss
+      <a class="brand" href="#">
+        <img id="brand-image" alt="Website Logo" src="http://communications.olemiss.edu/wp-content/uploads/sites/5/2014/10/stacked-no_stroke-red.png">
       </a>
 
 
@@ -36,44 +36,66 @@
   </div>
 </nav>
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Sap number:</strong>
-  <%= @employee.sap_number %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @employee.email %>
-</p>
-
-<p>
-  <strong>Department:</strong>
-  <%= @employee.department %>
-</p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @employee.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @employee.last_name %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @employee.phone_number %>
-</p>
-
-<p>
-  <strong>Username:</strong>
-  <%= @employee.username %>
-</p>
+<form class="form-profile col-md-12 well text-center">
 
 
+  <p id="notice">
+    <strong>ID Number: </strong>
+    <%= notice %>
+  </p>
+
+  <br><br>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @employee.email %>
+  </p>
+
+  <br><br>
+
+  <p>
+    <strong>First name:</strong>
+    <%= @employee.first_name %>
+  </p>
+
+  <br><br>
+
+  <p>
+    <strong>Last name:</strong>
+    <%= @employee.last_name %>
+  </p>
+
+  <br><br>
+
+  <p>
+    <strong>Username:</strong>
+    <%= @employee.username %>
+  </p>
+
+  <br><br>
+
+  <p>
+    <strong>Sap number:</strong>
+    <%= @employee.sap_number %>
+  </p>
+
+  <br><br>
+
+  <p>
+    <strong>Department:</strong>
+    <%= @employee.department %>
+  </p>
+
+  <br><br>
+
+  <p>
+    <strong>Phone number:</strong>
+    <%= @employee.phone_number %>
+  </p>
+
+<button type="edit" class="btn-login btn btn-primary">Edit</button>
+
+</form>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
 <%= link_to 'Back', employees_path %>
