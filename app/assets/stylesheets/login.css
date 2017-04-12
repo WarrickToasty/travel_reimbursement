@@ -3,6 +3,17 @@
 
 
 
+.form-profile{
+    border: 1px solid black;
+    margin-top: 50px;
+    padding-top: 20px 50px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+
+}
 
 
 .our-logo{
