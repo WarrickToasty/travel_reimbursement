@@ -69,6 +69,7 @@ class TripsController < ApplicationController
     @trip = Trip.where('employee_id = ? AND (begin_date <= ? AND end_date >= ?)', @emp_id, Date.today, Date.today).take
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_trip

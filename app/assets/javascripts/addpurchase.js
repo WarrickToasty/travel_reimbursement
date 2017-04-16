@@ -67,7 +67,4 @@ function otherTest(){
     descShow();
   }
 }
-$('#sandbox-container .input-group.date').datepicker({
-    format: "mm/dd/yy",
-    todayBtn: true
-});
+

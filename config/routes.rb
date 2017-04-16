@@ -10,8 +10,13 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  get   '/employees/edit', to: 'employees#edit'
+  get   '/profile/edit', to: 'employees#edit'
   get   '/trips/current', to: 'trips#current'
+  get   'home', to: 'static_pages#home'
+  get   'profile', to: 'employees#show'
+  get   'profile/edit', to: 'employees#edit'
+  get   'trips/past', to: 'employees#past'
+
 
   resources :purchases
   resources :trips

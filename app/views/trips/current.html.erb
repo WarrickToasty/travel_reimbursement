@@ -1,152 +1,112 @@
-<nav class="navbar navbar-inverse" >
-  <div class="container-fluid">
 
-    <!-- Logo -->
-    <div class="navbar-header">
-      <a class="navbar-brand">
-        OleMiss
-      </a>
-
-
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-
-
-
-    <!-- Menu -->
-    <div class="collapse navbar-collapse" id="mainNavBar">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Current Trip</a></li>
-        <li><a href="#">Past Trips</a></li>
-        <li><a href="#">Contact/Help</a></li>
-
-      </ul>
-      <a class="navbar-brand navbar-right">
-        OleMiss
-      </a>
-    </div>
-
-  </div>
-</nav>
 
 <p id="notice"><%= notice %></p>
 
-<p>
+<br>
   <strong>User:</strong>
   <%=  %>
-</p>
 
-<p>
+<br>
   <strong>Trip number:</strong>
   <%= @trip.trip_number %>
-</p>
 
-<p>
+<br>
   <strong>Multi page:</strong>
   <%= @trip.multi_page %>
-</p>
 
-<p>
+<br>
   <strong>Sap number:</strong>
   <%= @trip.sap_number %>
-</p>
 
-<p>
+<br>
   <strong>Contact person:</strong>
   <%= @trip.contact_person %>
-</p>
 
-<p>
+<br>
   <strong>Purpose:</strong>
   <%= @trip.purpose %>
-</p>
 
-<p>
+<br>
   <strong>Place:</strong>
   <%= @trip.place %>
-</p>
 
-<p>
+<br>
   <strong>Meeting time:</strong>
   <%= @trip.meeting_time %>
-</p>
 
-<p>
+<br>
   <strong>Meeting date:</strong>
   <%= @trip.meeting_date %>
-</p>
 
-<p>
+<br>
   <strong>Begin time:</strong>
   <%= @trip.begin_time %>
-</p>
 
-<p>
+<br>
   <strong>End time:</strong>
   <%= @trip.end_time %>
-</p>
 
-<p>
+<br>
   <strong>Begin date:</strong>
   <%= @trip.begin_date %>
-</p>
 
-<p>
+<br>
   <strong>End date:</strong>
   <%= @trip.end_date %>
-</p>
 
-<p>
+<br>
   <strong>Accompanied by:</strong>
   <%= @trip.accompanied_by %>
-</p>
 
-<p>
+<br>
   <strong>Travel estimate:</strong>
   <%= @trip.travel_estimate %>
-</p>
 
-<p>
+<br>
   <strong>Food estimate:</strong>
   <%= @trip.food_estimate %>
-</p>
 
-<p>
+<br>
   <strong>Lodging estimate:</strong>
   <%= @trip.lodging_estimate %>
-</p>
 
-<p>
+<br>
   <strong>Fee estimate:</strong>
   <%= @trip.fee_estimate %>
-</p>
 
-<p>
+<br>
   <strong>Conference fee:</strong>
   <%= @trip.conference_fee %>
-</p>
 
-<p>
+<br>
   <strong>Banquet fee:</strong>
   <%= @trip.banquet_fee %>
-</p>
 
-<p>
+<br>
   <strong>Dues:</strong>
   <%= @trip.dues %>
-</p>
 
-<p>
+<br>
   <strong>Employee:</strong>
   <%= @trip.employee %>
-</p>
+<br><br>
+<% @trip.purchases.each do |purchase| %>
+    <table>
+    <tr>
+      <th>Category</th>
+      <th>Type</th>
+      <th>Amount</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><%= purchase.category %></td>
+      <td><%= purchase.tipe %></td>
+      <td>$<%= purchase.amount %></td>
+      <td><%= purchase.description %></td>
+    </tr>
+    </table>
+    <br>
+<% end %>
 
 <%= link_to 'Edit', edit_trip_path(@trip) %> |
 <%= link_to 'Back', trips_path %>

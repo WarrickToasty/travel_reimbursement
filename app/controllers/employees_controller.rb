@@ -10,7 +10,6 @@ class EmployeesController < ApplicationController
   # GET /employees/1
   # GET /employees/1.json
   def show
-
   end
 
   # GET /employees/new
@@ -60,6 +59,12 @@ class EmployeesController < ApplicationController
       format.html { redirect_to employees_url, notice: 'Employee was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  # GET /employees/past
+  # GET /employees/past.json
+  def past
+    @employee = Employee.where('user_id = ?', session[:user_id]).take
   end
 
   private

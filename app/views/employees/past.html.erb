@@ -1,0 +1,17 @@
+<% @employee.trips.each do |trip| %>
+    <table>
+      <tr>
+        <th>Category</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><%= trip.trip_number %></td>
+        <td><%= trip.begin_date %></td>
+        <td>$<%= trip.end_date %></td>
+        <td><%= trip.purpose %></td>
+      </tr>
+    </table>
+    <br>
+<% end %>
