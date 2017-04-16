@@ -1,8 +1,10 @@
 class SessionsController < ApplicationController
   def new
+    @disable_nav = true
   end
 
   def create
+
     user = User.find_by(username: params[:session][:username].downcase)
     if user && user.authenticate(params[:session][:password])
         log_in user

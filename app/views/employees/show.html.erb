@@ -1,42 +1,5 @@
-<nav class="navbar navbar-inverse" >
-  <div class="container-fluid">
 
-    <!-- Logo -->
-    <div class="navbar-header">
-      <a class="brand" href="#">
-        <img id="brand-image" alt="Website Logo" src="http://communications.olemiss.edu/wp-content/uploads/sites/5/2014/10/stacked-no_stroke-red.png">
-      </a>
-
-
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-
-
-
-    <!-- Menu -->
-    <div class="collapse navbar-collapse" id="mainNavBar">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Current Trip</a></li>
-        <li><a href="#">Past Trips</a></li>
-        <li><a href="#">Contact/Help</a></li>
-
-      </ul>
-      <a class="navbar-brand navbar-right">
-        OleMiss
-      </a>
-    </div>
-
-  </div>
-</nav>
-
-<form class="form-profile col-md-12 well text-center">
+<form class="form-profile col-md-offset-2 col-md-8 well text-center">
 
 
   <p id="notice">
@@ -93,9 +56,8 @@
     <%= @employee.phone_number %>
   </p>
 
-<button type="edit" class="btn-login btn btn-primary">Edit</button>
+  <%= link_to 'Edit', edit_employee_path(), class: "btn-login btn btn-primary" %>
 
 </form>
 
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
 <%= link_to 'Back', employees_path %>

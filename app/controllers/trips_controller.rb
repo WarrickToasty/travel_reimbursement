@@ -10,6 +10,7 @@ class TripsController < ApplicationController
   # GET /trips/1
   # GET /trips/1.json
   def show
+
   end
 
   # GET /trips/new
@@ -61,14 +62,26 @@ class TripsController < ApplicationController
     end
   end
 
+  # GET /trips/current
+  # Get /trips/current.json
+  def current
+    @emp_id = session[:user_id]
+    @trip = Trip.where('employee_id = ? AND (begin_date <= ? AND end_date >= ?)', @emp_id, Date.today, Date.today).take
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_trip
+
       @trip = Trip.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trip_params
+
       params.require(:trip).permit(:trip_number, :multi_page, :sap_number, :contact_person, :purpose, :place, :meeting_time, :meeting_date, :begin_time, :end_time, :begin_date, :end_date, :accompanied_by, :travel_estimate, :food_estimate, :lodging_estimate, :fee_estimate, :conference_fee, :banquet_fee, :dues, :employee_id)
     end
+
+
+
 end
