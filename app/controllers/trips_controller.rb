@@ -65,8 +65,11 @@ class TripsController < ApplicationController
   # GET /trips/current
   # Get /trips/current.json
   def current
-    @emp_id = session[:user_id]
-    @trip = Trip.where('employee_id = ? AND (begin_date <= ? AND end_date >= ?)', @emp_id, Date.today, Date.today).take
+    @emp_id = Employee.where('user_id = ?', session[:user_id]).take
+    @trip = Trip.where('employee_id = ? AND (begin_date <= ? AND end_date >= ?)', @emp_id.id, Date.today, Date.today).take
+    if @trip.nil?
+        redirect_to '/trips/past'
+    end
   end
 
 

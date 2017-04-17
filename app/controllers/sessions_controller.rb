@@ -8,10 +8,16 @@ class SessionsController < ApplicationController
     user = User.find_by(username: params[:session][:username].downcase)
     if user && user.authenticate(params[:session][:password])
         log_in user
-        redirect_to user
+        @employee = Employee.where('user_id = ?', session[:user_id]).take
+        if @employee.nil?
+          redirect_to '/employees/new'
+        else
+          redirect_to '/home'
+        end
+
     else
       flash.now[:danger] = 'Invalid email/password combination'
-      render 'new'
+      redirect_to '/login'
     end
   end
 

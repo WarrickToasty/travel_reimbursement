@@ -1,9 +1,12 @@
-<% @employee.trips.each do |trip| %>
-    <table>
+<div class="form-profile col-md-offset-2 col-md-8 well">
+
+<% @employee.trips.sort { |a,b| b.begin_date <=> a.begin_date }.each do |trip| %>
+
+    <table class="table">
       <tr>
-        <th>Category</th>
-        <th>Type</th>
-        <th>Amount</th>
+        <th>Trip number</th>
+        <th>Begin Date</th>
+        <th>End Date</th>
         <th>Description</th>
       </tr>
       <tr>
@@ -13,5 +16,7 @@
         <td><%= trip.purpose %></td>
       </tr>
     </table>
+
     <br>
 <% end %>
+</div>

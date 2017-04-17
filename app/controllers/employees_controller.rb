@@ -10,6 +10,9 @@ class EmployeesController < ApplicationController
   # GET /employees/1
   # GET /employees/1.json
   def show
+    if @employee.nil?
+      redirect_to 'employees/new'
+    end
   end
 
   # GET /employees/new
