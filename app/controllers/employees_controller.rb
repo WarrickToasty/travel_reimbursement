@@ -10,8 +10,10 @@ class EmployeesController < ApplicationController
   # GET /employees/1
   # GET /employees/1.json
   def show
+    @employee = Employee.where('user_id = ?', session[:user_id]).take
     if @employee.nil?
-      redirect_to 'employees/new'
+      redirect_to '/employees/new'
+      return
     end
   end
 
@@ -68,6 +70,10 @@ class EmployeesController < ApplicationController
   # GET /employees/past.json
   def past
     @employee = Employee.where('user_id = ?', session[:user_id]).take
+    if @employee.nil?
+      redirect_to '/employees/new'
+      return
+    end
   end
 
   private
