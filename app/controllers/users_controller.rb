@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    @disable_nav = true
     @user = User.new
   end
 

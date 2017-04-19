@@ -71,7 +71,11 @@ class TripsController < ApplicationController
     else
     @trip = Trip.where('employee_id = ? AND (begin_date <= ? AND end_date >= ?)', @employee.id, Date.today, Date.today).take
       if @trip.nil?
-        redirect_to '/trips/past'
+        flash[:notice] = "No current trip was found. Maybe you were looking for your most recent trip?"
+        @trip = Trip.order(:begin_date).last
+        if @trip.nil?
+          redirect_to '/trips/new'
+        end
       end
     end
   end
