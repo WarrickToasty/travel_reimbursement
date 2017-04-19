@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
       redirect_to '/login' # halts request cycle
     end
   end
+
+  def logout
+    log_out
+    redirect_to '/login'
+  end
 end

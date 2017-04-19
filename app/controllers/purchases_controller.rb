@@ -14,6 +14,7 @@ class PurchasesController < ApplicationController
 
   # GET /purchases/new
   def new
+    @variable = params[:tripNum]
     @purchase = Purchase.new
   end
 

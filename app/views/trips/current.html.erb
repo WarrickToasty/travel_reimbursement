@@ -1,7 +1,9 @@
-<button onclick="hideDiv()">Click Me</button>
+
 <div class="form-profile col-md-offset-2 col-md-8 well">
+  <!--
 <img width="100%" height="100%" src="https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg">
   <img width="100%" height="100%" src="http://img.huffingtonpost.com/asset/,scalefit_950_800_noupscale/55fc14631c00004800082775.jpeg">
+-->
 <p id="notice"><%= notice %></p>
 <table class="table">
   <tr>
@@ -31,9 +33,15 @@
       <strong>Purpose:</strong>
       <%= @trip.purpose %>
     </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td align="right">
+      <button class="btn btn-primary" onclick="hideDiv()">More</button>
+    </td>
   </tr>
 </table>
-<table id="hide" class="table">
+<table id="hide" class="table hidden-row">
   <tr>
     <td>
       <strong>Sap number:</strong>
@@ -106,25 +114,30 @@
     </td>
   </tr>
 </table>
+  <a href="/purchases/new"><button class="btn btn-primary">Add Purchase</button></a>
+
   <br><br>
+  <table class="table">
+    <tr>
+      <th>Category</th>
+      <th>Type</th>
+      <th>Amount</th>
+      <th>Description</th>
+      <th align="right"></th>
+    </tr>
+
   <% @trip.purchases.each do |purchase| %>
-      <table>
-      <tr>
-        <td>Category</td>
-        <td>Type</td>
-        <td>Amount</td>
-        <td>Description</td>
-      </tr>
+
       <tr>
         <td><%= purchase.category %></td>
         <td><%= purchase.tipe %></td>
         <td>$<%= purchase.amount %></td>
         <td><%= purchase.description %></td>
+        <td width="10%"><button class="btn btn-primary"><%= link_to 'Edit', edit_purchase_path(purchase), class: 'btn-primary' %></button></td >
       </tr>
-      </table>
-      <br>
-  <% end %>
 
+  <% end %>
+    </table>
   <%= link_to 'Edit', edit_trip_path(@trip) %> |
   <%= link_to 'Back', trips_path %>
 

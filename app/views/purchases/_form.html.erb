@@ -40,10 +40,10 @@
         <label>Description</label>
         <input class="form-control" id="descValue" type="text" name="purchase[description]"><br>
       </div>
-
+      <%= @variable %>
       <div class="field">
         <%= f.label :trip_id %>
-        <%= f.text_field :trip_id %>
+        <%= f.text_field :trip_id, placeholder: @variable %>
       </div>
     </div>
   <div class="actions">
