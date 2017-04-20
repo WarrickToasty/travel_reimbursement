@@ -81,7 +81,11 @@ class EmployeesController < ApplicationController
     def set_employee
       @employee = Employee.where('user_id = ?', params[:id]).take
       if @employee.nil?
-        redirect_to '/home'
+        @employee = Employee.where('user_id = ?', session[:user_id]).take
+        if @employee.nil?
+          redirect_to '/employees/new'
+          return
+        end
         return
       end
     end

@@ -1,63 +1,67 @@
 
 <div class="form-profile col-md-offset-2 col-md-8 well text-center">
-
-
   <p id="notice">
-    <strong>ID Number: </strong>
     <%= notice %>
   </p>
+<table class="table">
 
-  <br><br>
 
-  <p>
+
+    <tr>
+  <td>
     <strong>Email:</strong>
     <%= @employee.email %>
-  </p>
+  </td>
+    </tr>
 
-  <br><br>
-
-  <p>
+  <tr>
+  <td>
     <strong>First name:</strong>
     <%= @employee.first_name %>
-  </p>
+  </td>
+  </tr>
 
-  <br><br>
-
-  <p>
+  <tr>
+  <td>
     <strong>Last name:</strong>
     <%= @employee.last_name %>
-  </p>
+  </td>
 
-  <br><br>
+  </tr>
 
-  <p>
+  <tr>
+  <td>
     <strong>Username:</strong>
     <%= @employee.username %>
-  </p>
+  </td>
 
-  <br><br>
-
-  <p>
+  </tr>
+  <tr>
+  <td>
     <strong>Sap number:</strong>
     <%= @employee.sap_number %>
-  </p>
+  </td>
+  </tr>
 
-  <br><br>
-
-  <p>
+  <tr>
+  <td>
     <strong>Department:</strong>
     <%= @employee.department %>
-  </p>
-
-  <br><br>
-
-  <p>
+  </td>
+  </tr>
+  
+<tr>
+  <td>
     <strong>Phone number:</strong>
     <%= @employee.phone_number %>
-  </p>
-
-  <%= link_to 'Edit', profile_edit_path, class: "btn-login btn btn-primary" %>
-
+  </td>
+</tr>
+  <tr>
+    <td>
+      <%= link_to 'Edit', profile_edit_path, class: "btn-login btn btn-primary" %>
+    </td>
+  </tr>
+</table>
 </div>
 
 <%= link_to 'Back', employees_path %>
