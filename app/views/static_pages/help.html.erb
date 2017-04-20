@@ -10,71 +10,36 @@
   <link rel="stylesheet" type="text/css" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-
 <body>
-<nav class="navbar navbar-inverse" >
-  <div class="container-fluid">
-
-    <!-- Logo in Navbar -->
-    <div class="navbar-header">
-      <a class="brand" href="#">
-        <img id="brand-image" alt="Website Logo" src="http://communications.olemiss.edu/wp-content/uploads/sites/5/2014/10/stacked-no_stroke-red.png">
-      </a>
-
-
-      <!-- 3-line Mobile Button -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-
-    <!-- Navbar Menu -->
-    <div class="collapse navbar-collapse" id="mainNavBar">
-      <ul class="nav navbar-nav">
-
-        <li class="active"><a href="#">Login</a></li>
-
-        <li><a href="file:///Users/CamboFresh/Desktop/bootstrap-3.3.7-dist/Register.html#">Register</a></li>
-
-        <li><a href="http://olemiss.edu/helpdesk/">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
 <!-- ^^ This needs to be edited ^^ -->
 
-<h1> Help Page </h1>
+<h1 align="center"> Help Page </h1>
 
-<h3>(Click To Open)</h3>
+<h3 class="container">(Click To Open)</h3>
 
 
 
 <div class="container">
-  <div class="panel-group">
     <div class="panel panel-success">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" href="#collapse1"><strong>Employee Travel - Information/Assistance/Questions</strong></a>
+          <a href="#collapse1" data-toggle="collapse" ><strong>Employee Travel - Information/Assistance/Questions</strong></a>
         </h4>
       </div>
     </div>
-    <div id="collapse1" class="panel-collapse collapse">
+    <div id="collapse1" class="collapse">
       <div class="panel-body">
         <p>&#9658; Policies/Forms are all posted on our website: http://procurement.olemiss.edu/travel/</p>
         <p>&#9658; For travelers whose last names begin with A-L, contact Loretta, lsthomas@olemiss.edu, x5590</p>
         <p>&#9658; For travelers whose last names begin with M-Z, contact Carla, cclay@olemiss.edu, x7043</p>
       </div>
     </div>
-  </div>
+</div>
 
 
   <div class="container">
@@ -324,16 +289,19 @@
     <div class="panel panel-success">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" href="#collapse12"><strong>CAMPUS MAIL</strong></a>
+          <a data-toggle="collapse" href="#collapse13"><strong>CAMPUS MAIL</strong></a>
         </h4>
       </div>
     </div>
-    <div id="collapse12" class="panel-collapse collapse">
+    <div id="collapse13" class="panel-collapse collapse">
       <div class="panel-body">
         <p> &#9658; All incoming mail should be addressed to you, your department name, your building, P.O. Box 1848, University, MS 38677.
           It is very important that the “P.O. Box 1848” be included and that it be right above the city/state line. </p>
       </div>
     </div>
   </div>
+<br><br><br><br>
+<!-- these were added so that a user that scrolls to the bottom doesn't have
+to scroll again to view the final panel when opened-->
 </body>
 </html>
