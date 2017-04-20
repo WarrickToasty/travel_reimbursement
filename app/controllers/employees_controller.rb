@@ -79,7 +79,11 @@ class EmployeesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_employee
-      @employee = Employee.where('user_id = ?', session[:user_id]).take
+      @employee = Employee.where('user_id = ?', params[:id]).take
+      if @employee.nil?
+        redirect_to '/home'
+        return
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
