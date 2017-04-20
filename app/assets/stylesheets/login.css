@@ -80,3 +80,7 @@ body {
 .hidden-row {
     display: none;
 }
+
+.panel-title{
+    color: #000000;
+}

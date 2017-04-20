@@ -1,2 +1,339 @@
-<h1>StaticPages#help</h1>
-<p>Find me in app/views/static_pages/help.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Help Page</title>
+
+  <link rel="stylesheet" type="text/css" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+<nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+
+    <!-- Logo in Navbar -->
+    <div class="navbar-header">
+      <a class="brand" href="#">
+        <img id="brand-image" alt="Website Logo" src="http://communications.olemiss.edu/wp-content/uploads/sites/5/2014/10/stacked-no_stroke-red.png">
+      </a>
+
+
+      <!-- 3-line Mobile Button -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+
+    <!-- Navbar Menu -->
+    <div class="collapse navbar-collapse" id="mainNavBar">
+      <ul class="nav navbar-nav">
+
+        <li class="active"><a href="#">Login</a></li>
+
+        <li><a href="file:///Users/CamboFresh/Desktop/bootstrap-3.3.7-dist/Register.html#">Register</a></li>
+
+        <li><a href="http://olemiss.edu/helpdesk/">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ^^ This needs to be edited ^^ -->
+
+<h1> Help Page </h1>
+
+<h3>(Click To Open)</h3>
+
+
+
+<div class="container">
+  <div class="panel-group">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1"><strong>Employee Travel - Information/Assistance/Questions</strong></a>
+        </h4>
+      </div>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>&#9658; Policies/Forms are all posted on our website: http://procurement.olemiss.edu/travel/</p>
+        <p>&#9658; For travelers whose last names begin with A-L, contact Loretta, lsthomas@olemiss.edu, x5590</p>
+        <p>&#9658; For travelers whose last names begin with M-Z, contact Carla, cclay@olemiss.edu, x7043</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse2"><strong>Travel Authorizations</strong></a>
+        </h4>
+      </div>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p> &#9658; A travel authorization, complete with all required information and signatures, must be received and approved by our office
+          PRIOR to the first day of the trip if any of these three criteria are true:
+        </p>
+        <p>&#9658; a fee is required to attend. This is true regardless of what the program is called, i.e., meeting, workshop, conference,
+          banquet, luncheon, etc. This is true even if the meeting is in Oxford!
+        </p>
+        <p>
+          &#9658; the travel is international. Requires the signatures of the Provost and the Chancellor. In addition, a completed
+          “Request for Approval of International Travel” form must be attached to the authorization. Self-generated funds only;
+          no “10” accounts can be used.
+        </p>
+        &#9658; an advance of funds is requested. Please submit these requests well in advance of the trip to give us sufficient time to
+        process them.
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse3"><strong>Travel Advances/Reimbursement</strong></a>
+        </h4>
+      </div>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p> &#9658; We cannot pay for employee travel directly -> this is a reimbursement system only. However, we can issue travel advances
+          with an approved travel authorization.
+        </p>
+        <p> &#9658; Prior-to-Trip Expenses (i.e., conference registration fee, airline ticket, hotel deposit, etc.) can be advanced at 100%
+          immediately upon request.
+        </p>
+        <p> &#9658; Other estimated expenses (i.e., meals, lodging, taxi, rental car, etc.) can be advanced at 80% ten days before the trip.
+        </p>
+        <p> &#9658; If you receive a travel advance, you must file a travel reimbursement voucher when you return to clear the travel advance.
+          Only two advances should be outstanding at any one time.
+        </p>
+        <p> &#9658;Travel advances not reconciled within a reasonable time will be payroll deducted.</p>
+        <p> &#9658; For Student Group Travel, we can be more flexible, i.e., direct bills, etc. Contact our office for more information. </p>
+        <p> &#9658; One employee cannot pay for another employee’s travel expenses.</p>
+        <p> &#9658; Original signatures required! Forms must be approved by traveler’s superior, even if the traveler is a department head.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse4"><strong>Airline Travel</strong></a>
+        </h4>
+      </div>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p> &#9658; If you are booking your own travel and not going through a state contract travel agency, you must have two comparable
+          airfare quotes. You may use airlines or web-based sources for your quotes, but the quotes must be from two different
+          sources (quotes from a contract travel agency cannot be used).</p>
+        <p> &#9658; Business or first-class travel is not reimbursable except under certain circumstances</p>
+        <p> &#9658; see policy for details </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse5"><strong>Meal Reimbursement</strong></a>
+        </h4>
+      </div>
+    </div>
+    <div id="collapse5" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p> &#9658; Employees are reimbursed for actual costs of meals not to exceed the daily maximum for the location.</p>
+        <p> &#9658;Even though receipts are not required for employee meals, this is not a per diem!</p>
+        <p> &#9658;Taxable meals are meals expenses that occur during official travel where overnight stay is not required. Taxable meals will
+          not be reimbursed.</p>
+        <p> &#9658;Group meals while in travel status should be excluded from the Travel Reimbursement Voucher and submitted on a Request for Payment.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse6"><strong>Request for Payment</strong></a>
+        </h4>
+      </div>
+    </div>
+    <div id="collapse6" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p> &#9658; Meal tips shall not exceed 20% of the pre-tax amount.</p>
+        <p> &#9658; Meals/food purchases for departmental social functions in celebration of an event or a holiday or to promote fellowship
+          among constituents is prohibited.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse7"><strong>Private Vehicle Travel</strong></a>
+        </h4>
+      </div>
+    </div>
+    <div id="collapse7" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p> &#9658; Current mileage reimbursement rate is $0.54 per mile.</p>
+        <p> &#9658; If an employee chooses to drive their personal vehicle and expenses, including meals and lodging, exceed the cost of the
+          lowest unrestricted airfare, reimbursement will be limited to the cost of flying.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse8"><strong>Rental Cars</strong></a>
+        </h4>
+      </div>
+    </div>
+    <div id="collapse8" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p> &#9658; Allowed when there is a demonstrated cost savings over other modes of transportation and use is not strictly for the
+          traveler’s convenience.</p>
+        <p> &#9658; Intermediate size vehicle is normally the largest rental that will be reimbursed.</p>
+        <p> &#9658; Must utilize the state contracts for both in state and out of state rentals.</p>
+        <p> &#9658; Hertz is the primary vendor for out-of-state rentals </p>
+        <p> &#9658; The option to purchase insurance should always be declined when a vehicle is rented utilizing the state contact. </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse9"><strong>PROCUREMENT CARD (P-Card)</strong></a>
+        </h4>
+      </div>
+    </div>
+    <div id="collapse9" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p> &#9658; Recommended method of payment for all purchases less than $5,000 except for travel and payments of professional
+          services </p>
+        <p> &#9658; Always obtain itemized receipts and do not pay MS sales tax </p>
+        <p> &#9658; For more details see attached document, USE OF THE PROCUREMENT CARD</p>
+        <p> &#9658; For questions and assistance, contact Shelley, smorriso@olemiss.edu, x7449, or Rachel, rbost@olemiss.edu, x7044 </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse10"><strong>PURCHASING</strong></a>
+        </h4>
+      </div>
+    </div>
+    <div id="collapse10" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p> &#9658; W-9 required to set-up a new vendor </p>
+        <p> &#9658; Two written, signed quotes for purchases between $5,000 and $50,000 </p>
+        <p> &#9658; Sealed bids required for purchases greater than $50,000 </p>
+        <p> &#9658; Only exceptions are state contracts and express products list </p>
+        <p> &#9658; IHL Board approval is required for all contracts that require a total expenditure of $250,000 or more </p>
+        <p> &#9658; Questions about requisitions, purchase orders, and purchasing in general? Contact Belinda, bredmond@olemiss.edu,
+          x7433, or Jeannine, jmwalter@olemiss.edu, x5596 </p>
+        <p> &#9658; Questions about bidding requirements, sole source purchases, requests for proposals, IHL board approvals, leases,
+          prepayments, contracts, etc.? Contact Katherine, kajones4@olemiss.edu, x7450 </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse11"><strong>ACCOUNTS PAYABLE</strong></a>
+        </h4>
+      </div>
+    </div>
+
+    <div id="collapse11" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p> &#9658; Please familiarize yourself with all Spending Policies (which are available on our website): Food Purchases, Reimbursement
+          of Out-of-Pocket Expenses, Inappropriate Use of Funds, Allowable Entertainment, etc. </p>
+        <p> &#9658; Must have original itemized invoices/receipts – no faxed copies, no statements, no packing slips </p>
+        <p> &#9658; Must have original signatures on requests for payment – no stamped signatures, no initialed signatures, no forgeries! </p>
+        <p> &#9658; All prepayments/deposits must be approved by IHL Commissioner/Board </p>
+        <p> &#9658; For questions concerning reimbursements and requests for payment, contact Dion, ldsanfor@olemiss.edu, x7337 </p>
+        <p> &#9658; For questions concerning purchase order invoices, contact Diana, dmmobley@olemiss.edu, x7060 </p>
+        <p> &#9658; For questions concerning payments to consultants/independent contractors/Forms 13s, contact Rachel,
+          rbost@olemiss.edu, x7044, or Diana, dmmobley@olemiss.edu, x7060 </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse12"><strong>PROPERTY CONTROL/CENTRAL RECEIVING </strong></a>
+        </h4>
+      </div>
+    </div>
+    <div id="collapse12" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p> &#9658; All equipment/furniture items purchased with University funds (regardless of funding source) valued at $1,000 or more
+          ($250 or more for computer-related items) plus exceptions items (property regardless of value) will be tagged as University
+          property and will be treated as such</p>
+        <p> &#9658; Equipment items purchased on P-Card MUST be brought to Central Receiving to be tagged </p>
+        <p> &#9658; Please complete and return the yellow asset tracking forms that accompany equipment deliveries </p>
+        <p> &#9658; Appropriate forms must be completed for all equipment transfers, loans (valid for one year only), and disposals:
+          http://procurement.olemiss.edu/purchasing/form-bank/ </p>
+        <p> &#9658; University employees or departments may not dispose of University property even if it is not tagged; all surplus property
+          must be removed by Property Control </p>
+        <p> &#9658; Visit our Surplus Property Warehouse 8am-4pm M-F to find equipment/furniture for your departmental needs </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse12"><strong>CAMPUS MAIL</strong></a>
+        </h4>
+      </div>
+    </div>
+    <div id="collapse12" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p> &#9658; All incoming mail should be addressed to you, your department name, your building, P.O. Box 1848, University, MS 38677.
+          It is very important that the “P.O. Box 1848” be included and that it be right above the city/state line. </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
