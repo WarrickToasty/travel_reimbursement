@@ -14,8 +14,7 @@ class PurchasesController < ApplicationController
 
   # GET /purchases/new
   def new
-    @variable = params[:tripNum]
-    @purchase = Purchase.new
+    @purchase = Purchase.new(:trip_id => params[:id])
   end
 
   # GET /purchases/1/edit
@@ -26,10 +25,9 @@ class PurchasesController < ApplicationController
   # POST /purchases.json
   def create
     @purchase = Purchase.new(purchase_params)
-
     respond_to do |format|
       if @purchase.save
-        format.html { redirect_to @purchase, notice: 'Purchase was successfully created.' }
+        format.html { redirect_to @purchase, notice: 'Purchase was successfully created.'  }
         format.json { render :show, status: :created, location: @purchase }
       else
         format.html { render :new }

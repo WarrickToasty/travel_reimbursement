@@ -48,13 +48,13 @@
   </div>
 
   <div class="form-group">
-    <label for="email">Meeting Date</label>
-    <%= f.date_select :meeting_date %>
+    <label for="end_date">End Date</label>
+    <%= f.date_select :end_date %>
   </div>
 
   <div class="form-group">
-    <label for="end_date">End Date</label>
-    <%= f.date_select :end_date %>
+    <label for="email">Meeting Date</label>
+    <%= f.date_select :meeting_date %>
   </div>
 
   <div class="form-group">
@@ -73,8 +73,6 @@
     <label for="end_time">End Time</label>
     <%= f.time_select :end_time, {ampm: true} %>
   </div>
-
-
 
   <div class="form-group">
     <label for="accompanied_by">Accompanied By</label>
@@ -116,10 +114,6 @@
     <%= f.text_field :dues, class: "form-control" %>
   </div>
 
-  <div class="form-group">
-    <label for="employee_id">Employee ID</label>
-    <%= f.text_field :employee_id, class: "form-control" %>
-  </div>
 
   <div class="actions">
     <%= f.submit %>

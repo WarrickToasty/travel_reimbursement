@@ -19,11 +19,12 @@ Rails.application.routes.draw do
   get   '/logout', to: 'application#logout'
 
 
-  resources :purchases
+  resources :purchases, shallow: true do
+      resources :trips
+  end
   resources :trips
   resources :employees
   resources :users
-
 
 
 

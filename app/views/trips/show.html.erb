@@ -115,7 +115,8 @@
       </td>
     </tr>
   </table>
-  <a href="/purchases/new"><button class="btn btn-primary">Add Purchase</button></a>
+  <%= link_to 'Profile', controller: 'purchases', action: 'new', id: @trip %>
+  <%= link_to '+ Purchase', new_purchase_path(:test => @trip.id), class: 'btn btn-primary' %>
 
   <br><br>
   <table class="table">

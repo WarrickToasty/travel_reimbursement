@@ -7,7 +7,7 @@
         <th>Trip number</th>
         <th>Begin Date</th>
         <th>End Date</th>
-        <th>Description</th>
+        <th>Purpose</th>
       </tr>
       <tr>
         <td><%= trip.trip_number %></td>
@@ -15,6 +15,7 @@
         <td>$<%= trip.end_date %></td>
         <td><%= trip.purpose %></td>
         <td><%= link_to 'Edit', edit_trip_path(trip), class: 'btn btn-primary' %></td>
+        <td><%= link_to 'Show', trip, class: 'btn btn-primary' %></td>
       </tr>
     </table>
 
