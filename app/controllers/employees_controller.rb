@@ -30,7 +30,8 @@ class EmployeesController < ApplicationController
   # POST /employees.json
   def create
     @employee = Employee.new(employee_params)
-
+    @employee.user_id = session[:user_id]
+    @employee.username = User.find(session[:user_id]).username
     respond_to do |format|
       if @employee.save
         format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
@@ -45,7 +46,9 @@ class EmployeesController < ApplicationController
   # PATCH/PUT /employees/1
   # PATCH/PUT /employees/1.json
   def update
+
     respond_to do |format|
+
       if @employee.update(employee_params)
         format.html { redirect_to @employee, notice: 'Employee was successfully updated.' }
         format.json { render :show, status: :ok, location: @employee }
@@ -92,6 +95,6 @@ class EmployeesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def employee_params
-      params.require(:employee).permit(:sap_number, :email, :department, :first_name, :last_name, :phone_number, :username, :user_id)
+      params.require(:employee).permit(:sap_number, :email, :department, :first_name, :last_name, :phone_number, User.find(session[:user_id]).username, session[:user_id])
     end
 end

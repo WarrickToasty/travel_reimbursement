@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  skip_before_filter :require_login, :only => [:help]
+  skip_before_action :require_login, :only => [:help]
   def home
   end
 

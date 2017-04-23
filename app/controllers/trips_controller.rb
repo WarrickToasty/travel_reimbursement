@@ -10,7 +10,12 @@ class TripsController < ApplicationController
   # GET /trips/1
   # GET /trips/1.json
   def show
-
+      @empHolder = User.find(session[:user_id]).employee
+      @trip = Trip.where('employee_id = ? AND id = ?', @empHolder.id, params[:id]).take
+      if @trip.nil?
+        redirect_to '/trips/past'
+        return
+      end
   end
 
   # GET /trips/new
@@ -26,6 +31,9 @@ class TripsController < ApplicationController
   # POST /trips.json
   def create
     @trip = Trip.new(trip_params)
+    @empHolder = User.find(session[:user_id]).employee
+    @trip.employee_id = @empHolder.id
+    @trip.sap_number =@empHolder.sap_number
 
     respond_to do |format|
       if @trip.save
@@ -72,7 +80,7 @@ class TripsController < ApplicationController
     @trip = Trip.where('employee_id = ? AND (begin_date <= ? AND end_date >= ?)', @employee.id, Date.today, Date.today).take
       if @trip.nil?
         flash[:notice] = "No current trip was found. Maybe you were looking for your most recent trip?"
-        @trip = Trip.order(:begin_date).last
+        @trip = Trip.where('employee_id = ?', @employee.id ).order(:begin_date).last
         if @trip.nil?
           redirect_to '/trips/new'
         end
@@ -84,14 +92,18 @@ class TripsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_trip
-
-      @trip = Trip.find(params[:id])
+      @empHolder = User.find(session[:user_id]).employee
+      @trip = Trip.where('employee_id = ? AND id= ?', @empHolder.id, params[:id]).take
+      if @trip.nil?
+        redirect_to '/trips/past'
+        return
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trip_params
-
-      params.require(:trip).permit(:trip_number, :multi_page, :sap_number, :contact_person, :purpose, :place, :meeting_time, :meeting_date, :begin_time, :end_time, :begin_date, :end_date, :accompanied_by, :travel_estimate, :food_estimate, :lodging_estimate, :fee_estimate, :conference_fee, :banquet_fee, :dues, :employee_id)
+      @holder = User.find(session[:user_id]).employee
+      params.require(:trip).permit(:trip_number, :multi_page, @holder.sap_number, :contact_person, :purpose, :place, :meeting_time, :meeting_date, :begin_time, :end_time, :begin_date, :end_date, :accompanied_by, :travel_estimate, :food_estimate, :lodging_estimate, :fee_estimate, :conference_fee, :banquet_fee, :dues, @holder.id)
     end
 
 

@@ -3,59 +3,71 @@
   <p id="notice">
     <%= notice %>
   </p>
-<table class="table">
+<table class="profilePageTable">
 
 
-
-    <tr>
+  <tr>
   <td>
     <strong>Email:</strong>
+  </td>
+  <td>
     <%= @employee.email %>
   </td>
     </tr>
 
   <tr>
-  <td>
-    <strong>First name:</strong>
-    <%= @employee.first_name %>
-  </td>
+    <td>
+      <strong>First name:</strong>
+    </td>
+    <td>
+      <%= @employee.first_name %>
+    </td>
   </tr>
 
   <tr>
-  <td>
-    <strong>Last name:</strong>
-    <%= @employee.last_name %>
-  </td>
-
+    <td>
+      <strong>Last name:</strong>
+   </td>
+    <td>
+      <%= @employee.last_name %>
+    </td>
   </tr>
 
   <tr>
-  <td>
-    <strong>Username:</strong>
-    <%= @employee.username %>
-  </td>
-
-  </tr>
-  <tr>
-  <td>
-    <strong>Sap number:</strong>
-    <%= @employee.sap_number %>
-  </td>
+    <td>
+      <strong>Username:</strong>
+    </td>
+    <td>
+      <%= @employee.username %>
+    </td>
   </tr>
 
   <tr>
-  <td>
-    <strong>Department:</strong>
-    <%= @employee.department %>
-  </td>
+    <td>
+      <strong>Sap number:</strong>
+    </td>
+    <td>
+      <%= @employee.sap_number %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <strong>Department:</strong>
+    </td>
+    <td>
+      <%= @employee.department %>
+    </td>
   </tr>
   
-<tr>
-  <td>
-    <strong>Phone number:</strong>
-    <%= @employee.phone_number %>
-  </td>
-</tr>
+  <tr>
+    <td>
+      <strong>Phone number:</strong>
+    </td>
+    <td>
+      <%= @employee.phone_number %>
+    </td>
+  </tr>
   <tr>
     <td>
       <%= link_to 'Edit', profile_edit_path, class: "btn-login btn btn-primary" %>
@@ -63,5 +75,3 @@
   </tr>
 </table>
 </div>
-
-<%= link_to 'Back', employees_path %>

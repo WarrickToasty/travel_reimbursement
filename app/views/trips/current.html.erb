@@ -35,12 +35,13 @@
     </td>
     <td></td>
     <td></td>
-    <td></td>
+    <td><%= link_to 'Edit', edit_trip_path(@trip), class: "btn btn-primary" %></td>
     <td align="right">
       <button class="btn btn-primary" onclick="hideDiv()">More</button>
     </td>
   </tr>
 </table>
+
 <table id="hide" class="table hidden-row">
   <tr>
     <td>
@@ -133,13 +134,11 @@
         <td><%= purchase.tipe %></td>
         <td>$<%= purchase.amount %></td>
         <td><%= purchase.description %></td>
-        <td width="10%"><button class="btn btn-primary"><%= link_to 'Edit', edit_purchase_path(purchase), class: 'btn-primary' %></button></td >
+        <td width="10%"><%= link_to 'Edit', edit_purchase_path(purchase), class: 'btn btn-primary' %></td >
       </tr>
 
   <% end %>
     </table>
-  <%= link_to 'Edit', edit_trip_path(@trip) %> |
-  <%= link_to 'Back', trips_path %>
 
 
 </div>

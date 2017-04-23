@@ -14,6 +14,7 @@
         <td><%= trip.begin_date %></td>
         <td>$<%= trip.end_date %></td>
         <td><%= trip.purpose %></td>
+        <td><%= link_to 'Edit', edit_trip_path(trip), class: 'btn btn-primary' %></td>
       </tr>
     </table>
 
