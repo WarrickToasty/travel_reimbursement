@@ -9,3 +9,19 @@ function hideDiv() {
         document.getElementById('hide').classList.add('hidden-row');
     }
 }
+
+function assignId(){
+    var list = document.getElementsByClassName('current');
+    for (var i = 0; i < list.length; i++) {
+        var j = i+1
+        list[i].setAttribute("id", "hide" + j);
+    }
+}
+function assignLink(){
+    var list = document.getElementsByClassName('currentLink');
+    for (var i = 0; i < list.length; i++) {
+        var j = i+1
+        list[i].setAttribute("href", "#hide" + j);
+    }
+}
+

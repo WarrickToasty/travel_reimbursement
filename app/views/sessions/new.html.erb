@@ -84,8 +84,8 @@
 
     <%= form_for(:session, url: login_path) do |f| %>
 
-        <%= f.label :email %>
-        <%= f.email_field :username, class: 'form-control', placeholder: "email@go.olemiss.edu" %>
+        <%= f.label :username %>
+        <%= f.text_field :username, class: 'form-control', placeholder: "email@go.olemiss.edu" %>
 
         <%= f.label :password %>
         <%= f.password_field :password, class: 'form-control', placeholder: "password" %>

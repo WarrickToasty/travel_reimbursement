@@ -17,7 +17,7 @@
       </td>
       <td>
         <strong>Begin time:</strong>
-        <%= @trip.begin_time.strftime('%I:%M %p') %>
+        <%= @trip.try(:begin_time).try(:strftime, '%I:%M %p') %>
       </td>
       <td>
         <strong>Begin date:</strong>
@@ -70,17 +70,17 @@
       </td>
       <td>
         <strong>Meeting time:  </strong>
-        <%= @trip.meeting_time.strftime('%I:%M %p') %>
+        <%= @trip.try(:meeting_time).try(:strftime, '%I:%M %p') %>
       </td>
     </tr>
     <tr>
       <td>
         <strong>Begin time:</strong>
-        <%= @trip.begin_time.strftime('%I:%M %p') %>
+        <%= @trip.try(:begin_time).try(:strftime, '%I:%M %p') %>
       </td>
       <td>
         <strong>End time:</strong>
-        <%= @trip.end_time.strftime('%I:%M %p') %>
+        <%= @trip.try(:end_time).try(:strftime, '%I:%M %p') %>
       </td>
     </tr>
     <tr>

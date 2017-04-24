@@ -77,6 +77,11 @@ class EmployeesController < ApplicationController
       redirect_to '/employees/new'
       return
     end
+    @trip = Trip.where('employee_id = ?', @employee.id).take
+    if @trip.nil?
+      redirect_to '/trips/new'
+      return
+    end
   end
 
   private

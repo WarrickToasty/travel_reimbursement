@@ -4,9 +4,11 @@
 <img width="100%" height="100%" src="https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg">
   <img width="100%" height="100%" src="http://img.huffingtonpost.com/asset/,scalefit_950_800_noupscale/55fc14631c00004800082775.jpeg">
 -->
+
+<p id="notice"><%= notice %></p>
 <% @trips.each do |trip| %>
   <div class="form-profile col-md-offset-2 col-md-8 well">
-<p id="notice"><%= notice %></p>
+
 <table class="table">
   <tr>
     <td>
@@ -19,7 +21,7 @@
     </td>
     <td>
       <strong>Begin time:</strong>
-      <%= trip.begin_time %>
+      <%= @trip.try(:begin_time).try(:strftime, '%I:%M %p') %>
     </td>
     <td>
       <strong>Begin date:</strong>
@@ -39,12 +41,12 @@
     <td></td>
     <td><%= link_to 'Edit', edit_trip_path(trip), class: "btn btn-primary" %></td>
     <td align="right">
-      <button class="btn btn-primary" onclick="hideDiv()">More</button>
+      <a data-toggle="collapse" href="" onmouseover="assignId(), assignLink()" class="currentLink"><button class="btn btn-primary" >More</button></a>
     </td>
   </tr>
 </table>
-
-<table id="hide" class="table hidden-row">
+<div class="current collapsing" style="height: 0px" aria-expanded="false">
+<table id="" class="table" >
   <tr>
     <td>
       <strong>Sap number:</strong>
@@ -72,17 +74,17 @@
     </td>
     <td>
       <strong>Meeting time:  </strong>
-      <%= trip.meeting_time %>
+      <%= @trip.try(:meeting_time).try(:strftime, '%I:%M %p') %>
     </td>
   </tr>
   <tr>
     <td>
       <strong>Begin time:</strong>
-      <%= trip.begin_time %>
+      <%= @trip.try(:begin_time).try(:strftime, '%I:%M %p') %>
     </td>
     <td>
       <strong>End time:</strong>
-      <%= trip.end_time %>
+      <%= @trip.try(:end_time).try(:strftime, '%I:%M %p') %>
     </td>
   </tr>
   <tr>
@@ -117,7 +119,7 @@
     </td>
   </tr>
 </table>
-
+</div>
   <%= link_to 'New Purchase', new_purchase_path(:id => trip.id), class: 'btn btn-primary' %>
 
   <br><br>
@@ -145,4 +147,4 @@
   </div>
   <% end %>
 
-
+</body>
