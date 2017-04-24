@@ -1,41 +1,43 @@
 
-<div class="form-profile col-md-offset-2 col-md-8 well">
+
   <!--
 <img width="100%" height="100%" src="https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg">
   <img width="100%" height="100%" src="http://img.huffingtonpost.com/asset/,scalefit_950_800_noupscale/55fc14631c00004800082775.jpeg">
 -->
+<% @trips.each do |trip| %>
+  <div class="form-profile col-md-offset-2 col-md-8 well">
 <p id="notice"><%= notice %></p>
 <table class="table">
   <tr>
     <td>
       <strong>Trip number:</strong>
-      <%= @trip.trip_number %>
+      <%= trip.trip_number %>
     </td>
     <td>
       <strong>Contact person:</strong>
-      <%= @trip.contact_person %>
+      <%= trip.contact_person %>
     </td>
     <td>
       <strong>Begin time:</strong>
-      <%= @trip.begin_time %>
+      <%= trip.begin_time %>
     </td>
     <td>
       <strong>Begin date:</strong>
-      <%= @trip.begin_date %>
+      <%= trip.begin_date %>
     </td>
     <td>
       <strong>End date:</strong>
-      <%= @trip.end_date %>
+      <%= trip.end_date %>
     </td>
   </tr>
   <tr>
     <td>
       <strong>Purpose:</strong>
-      <%= @trip.purpose %>
+      <%= trip.purpose %>
     </td>
     <td></td>
     <td></td>
-    <td><%= link_to 'Edit', edit_trip_path(@trip), class: "btn btn-primary" %></td>
+    <td><%= link_to 'Edit', edit_trip_path(trip), class: "btn btn-primary" %></td>
     <td align="right">
       <button class="btn btn-primary" onclick="hideDiv()">More</button>
     </td>
@@ -46,76 +48,77 @@
   <tr>
     <td>
       <strong>Sap number:</strong>
-      <%= @trip.sap_number %>
+      <%= trip.sap_number %>
     </td>
     <td>
       <strong>Accompanied by:</strong>
-      <%= @trip.accompanied_by %>
+      <%= trip.accompanied_by %>
     </td>
   </tr>
   <tr>
     <td>
       <strong>Place:</strong>
-      <%= @trip.place %>
+      <%= trip.place %>
     </td>
     <td>
       <strong>Dues:</strong>
-      <%= @trip.dues %>
+      <%= trip.dues %>
     </td>
   </tr>
   <tr>
     <td>
       <strong>Meeting date:</strong>
-      <%= @trip.meeting_date %>
+      <%= trip.meeting_date %>
     </td>
     <td>
       <strong>Meeting time:  </strong>
-      <%= @trip.meeting_time %>
+      <%= trip.meeting_time %>
     </td>
   </tr>
   <tr>
     <td>
       <strong>Begin time:</strong>
-      <%= @trip.begin_time %>
+      <%= trip.begin_time %>
     </td>
     <td>
       <strong>End time:</strong>
-      <%= @trip.end_time %>
+      <%= trip.end_time %>
     </td>
   </tr>
   <tr>
     <td>
       <strong>Travel estimate:</strong>
-      <%= @trip.travel_estimate %>
+      <%= trip.travel_estimate %>
     </td>
     <td>
       <strong>Food estimate:</strong>
-      <%= @trip.food_estimate %>
+      <%= trip.food_estimate %>
     </td>
   </tr>
   <tr>
     <td>
       <strong>Lodging estimate:</strong>
-      <%= @trip.lodging_estimate %>
+      <%= trip.lodging_estimate %>
     </td>
 
     <td>
       <strong>Conference fee:</strong>
-      <%= @trip.conference_fee %>
+      <%= trip.conference_fee %>
     </td>
   </tr>
   <tr>
     <td>
       <strong>Banquet fee:</strong>
-      <%= @trip.banquet_fee %>
+      <%= trip.banquet_fee %>
     </td>
     <td>
       <strong>Fee estimate:</strong>
-      <%= @trip.fee_estimate %>
+      <%= trip.fee_estimate %>
     </td>
   </tr>
 </table>
-  <a href="/purchases/new"><button class="btn btn-primary">Add Purchase</button></a>
+
+  <%= link_to 'New Purchase', new_purchase_path(:id => trip.id), class: 'btn btn-primary' %>
 
   <br><br>
   <table class="table">
@@ -127,7 +130,7 @@
       <th align="right"></th>
     </tr>
 
-  <% @trip.purchases.each do |purchase| %>
+  <% trip.purchases.each do |purchase| %>
 
       <tr>
         <td><%= purchase.category %></td>
@@ -139,6 +142,7 @@
 
   <% end %>
     </table>
+  </div>
+  <% end %>
 
 
-</div>

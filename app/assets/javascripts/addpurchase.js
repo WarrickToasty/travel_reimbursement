@@ -49,17 +49,17 @@ function createOption(ddl, text, value) {
 }
 function descHide(){
   document.getElementById("descValue").value = "";
-  document.getElementById("desc").style.visibility = "hidden";
+  document.getElementById("desc").style.display = "none";
 }
 function descShow(){
-    document.getElementById("desc").style.visibility = "visible";
+    document.getElementById("desc").style.display = "inline";
 }
 function ddl2Hide(){
   document.getElementById("ddl2").value = '';
-  document.getElementById("dd2").style.visibility = "hidden";
+  document.getElementById("dd2").style.display = "none";
 }
 function ddl2Show(){
-  document.getElementById("dd2").style.visibility = "visible";
+  document.getElementById("dd2").style.display = "inline";
 }
 function otherTest(){
   descHide();

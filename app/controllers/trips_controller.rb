@@ -77,8 +77,8 @@ class TripsController < ApplicationController
     if @employee.nil?
       redirect_to '/employees/new'
     else
-    @trip = Trip.where('employee_id = ? AND (begin_date <= ? AND end_date >= ?)', @employee.id, Date.today, Date.today).take
-      if @trip.nil?
+    @trips = Trip.where('employee_id = ? AND (begin_date <= ? AND end_date >= ?)', @employee.id, Date.today, Date.today).all
+      if @trips.nil?
         flash[:notice] = "No current trip was found. Maybe you were looking for your most recent trip?"
         @trip = Trip.where('employee_id = ?', @employee.id ).order(:begin_date).last
         if @trip.nil?
@@ -86,6 +86,7 @@ class TripsController < ApplicationController
         end
       end
     end
+
   end
 
 
@@ -93,10 +94,15 @@ class TripsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_trip
       @empHolder = User.find(session[:user_id]).employee
-      @trip = Trip.where('employee_id = ? AND id= ?', @empHolder.id, params[:id]).take
+      @trip = Trip.find(params[:id])
       if @trip.nil?
-        redirect_to '/trips/past'
         return
+      else
+        if @trip.employee_id == @empHolder.id
+            return
+        else
+            redirect_to 'past/trips'
+        end
       end
     end
 

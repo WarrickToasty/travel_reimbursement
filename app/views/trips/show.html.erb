@@ -17,7 +17,7 @@
       </td>
       <td>
         <strong>Begin time:</strong>
-        <%= @trip.begin_time %>
+        <%= @trip.begin_time.strftime('%I:%M %p') %>
       </td>
       <td>
         <strong>Begin date:</strong>
@@ -70,17 +70,17 @@
       </td>
       <td>
         <strong>Meeting time:  </strong>
-        <%= @trip.meeting_time %>
+        <%= @trip.meeting_time.strftime('%I:%M %p') %>
       </td>
     </tr>
     <tr>
       <td>
         <strong>Begin time:</strong>
-        <%= @trip.begin_time %>
+        <%= @trip.begin_time.strftime('%I:%M %p') %>
       </td>
       <td>
         <strong>End time:</strong>
-        <%= @trip.end_time %>
+        <%= @trip.end_time.strftime('%I:%M %p') %>
       </td>
     </tr>
     <tr>
@@ -115,8 +115,8 @@
       </td>
     </tr>
   </table>
-  <%= link_to 'Profile', controller: 'purchases', action: 'new', id: @trip %>
-  <%= link_to '+ Purchase', new_purchase_path(:test => @trip.id), class: 'btn btn-primary' %>
+
+  <%= link_to 'New Purchase', new_purchase_path(:id => @trip.id), class: 'btn btn-primary' %>
 
   <br><br>
   <table class="table">

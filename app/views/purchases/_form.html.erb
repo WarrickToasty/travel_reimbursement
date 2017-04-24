@@ -40,11 +40,9 @@
         <label>Description</label>
         <input class="form-control" id="descValue" type="text" name="purchase[description]"><br>
       </div>
-      <%= @variable %>
-      <div class="field">
-        <%= f.label :trip_id %>
-        <%= f.hidden_field :trip_id %>
-      </div>
+
+      <%= f.hidden_field :trip_id %>
+
     </div>
   <div class="actions">
     <%= f.submit class: "btn-login btn btn-primary" %>
