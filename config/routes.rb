@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get   'profile/edit', to: 'employees#edit'
   get   'trips/past', to: 'employees#past'
   get   '/logout', to: 'application#logout'
-
+  resources :users, path: '/signup', as: :users, only: [:create]
 
   resources :purchases
   resources :trips

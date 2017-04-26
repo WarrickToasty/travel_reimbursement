@@ -40,6 +40,7 @@ class UsersController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
+        @disable_nav = true
       end
     end
   end
