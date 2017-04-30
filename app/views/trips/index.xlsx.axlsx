@@ -1,0 +1,8 @@
+
+ wb = xlsx_package.workbook
+wb.add_worksheet(name: "Trips") do |sheet|
+  sheet.add_row ["Trip number", "Contact Person","Begin Time","Begin Date"]
+  @trips.each do |trips|
+    sheet.add_row [trips.trip_number, trips.contact_person,trips.begin_time,trips.begin_date]
+  end
+end

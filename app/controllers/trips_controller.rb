@@ -5,6 +5,15 @@ class TripsController < ApplicationController
   # GET /trips.json
   def index
     @trips = Trip.all
+    #@trips = Trip.find(params[:id])
+    #purchases = @trips.purchases
+    #@food = @purchases.where(categories = ?, 'foods').take
+    #@breakfasts = @foods.where('time = ?', 'breakfast').take
+    #@breakfasts.sort_by & :date
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   # GET /trips/1
@@ -75,6 +84,13 @@ class TripsController < ApplicationController
     end
   end
 
+  def download
+    @trips = Trip.all
+    respond_to do |format|
+      format.xlsx {render xlsx: 'download',filename: "trips.xlsx"}
+    end
+  end
+
   # GET /trips/current
   # Get /trips/current.json
   def current
@@ -93,8 +109,9 @@ class TripsController < ApplicationController
         return
       end
     end
-
   end
+
+
 
 
   private
@@ -124,5 +141,9 @@ class TripsController < ApplicationController
     end
 
 
-
 end
+
+
+
+
+
