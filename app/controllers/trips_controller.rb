@@ -13,6 +13,10 @@ class TripsController < ApplicationController
     respond_to do |format|
       format.html
       format.xlsx
+      format.pdf do
+        pdf = ReportPdf.new(@trips)
+        send_data pdf.render, filename: 'report.pdf', type: 'application/pdf'
+      end
     end
   end
 

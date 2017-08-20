@@ -42,6 +42,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'axlsx', '~> 2.0'
 gem "axlsx_rails"
 
+gem 'wicked_pdf'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

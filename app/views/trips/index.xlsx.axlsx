@@ -1,7 +1,44 @@
 
  wb = xlsx_package.workbook
 wb.add_worksheet(name: "Trips") do |sheet|
-  sheet.add_row ["Trip number", "Contact Person","Begin Time","Begin Date"]
+  sheet.add_row ["The University of Mississippi Travel Reimbursement Voucher","Employee","Trip #"]
+  sheet.add_row ["E-mail", "**SAP Personnel # is required"]
+  sheet.add_row ["Contact Person", "Dept Name", "Pers #"]
+  sheet.add_row ["Purpose and Place of Trip", "Meeting:", "Time", "Date", "Accompanied By: ", "Phone #"]
+  sheet.add_row ["Date", "Totals"]
+  sheet.add_row ["1.) Actual Meal Expenses: This is not a 'Per Diem'. You have to itemize per day the actual meal expense."]
+  sheet.add_row ["a. Breakfast"]
+  sheet.add_row ["b. Lunch"]
+  sheet.add_row ["c. Dinner"]
+  sheet.add_row ["Daily Meal Totals"]
+  sheet.add_row ["2.) Lodging*"]
+  sheet.add_row ["Total Meals and Lodging"]
+  sheet.add_row ["3.) Meal Tips (not to exceed 20%)"]
+  sheet.add_row ["4.) Taxi*"]
+  sheet.add_row ["5.) Parking, Tolls*"]
+  sheet.add_row ["6.) Gasoline*"]
+  sheet.add_row ["7.) Business Calls*"]
+  sheet.add_row ["Total Other"]
+  sheet.add_row ["Personal Car"]
+  sheet.add_row ["Date", "From", "To", "Mileage", "Amount", "Airfare*", "Rental Car*", "Bus/Train*"]
+  sheet.add_row ["Insert total dollar amount from Mileage Worksheet in this row"]
+  sheet.add_row ["Totals"]
+  sheet.add_row ["Registration Fees", "Other Reimbursable Expenses"]
+  sheet.add_row ["Date", "Description", "Amount", "Date", "Description", "Amount"]
+  sheet.add_row ["1.) Conference Fee*"]
+  sheet.add_row ["2.) Banquet Fee*"]
+  sheet.add_row ["3.) Dues*"]
+  sheet.add_row ["Total Fees", "Total Other Expenses"]
+  sheet.add_row ["Comments", "H.) Total Expenses"]
+  sheet.add_row ["I.) Exchange Rate**"]
+  sheet.add_row ["Certification: SUBJECT TO ANY DIFFERENCES DETEREMINED BY AUDIT, I CERTIFY THAT THE ABOVE AMOUNT CLAIMED FOR TRAVEL EXPENSES FOR THE PERIOD INDICATED IS TRUE AND ACCURATE AND THAT PAYMENT FOR ANY PART HAS NOT BEEN RECEIVED"]
+  sheet.add_row ["EMPLOYEE'S SIGNATURE(REQUIRED)", "DATE", "DEPARTMENT HEAD SIGNATURE(REQUIRED)", "DATE", "AUDITED BY", "DATE"]
+  sheet.add_row ["COST CENTER #", "AMOUNT", "APPROVAL", "INTERNAL ORDER #", "AMOUNT", "APPROVAL", "ADDRESS OR BANK CHANGES"]
+  sheet.add_row ["*RECEIPTS TO BE ATTACHED", "**PROOF OF EXCHANGE RATE MUST BE ATTACHED"]
+  sheet.add_hyperlink :location => 'http://procurement.olemiss.edu/travel'
+
+
+
   @trips.each do |trips|
     sheet.add_row [trips.trip_number, trips.contact_person,trips.begin_time,trips.begin_date]
   end
